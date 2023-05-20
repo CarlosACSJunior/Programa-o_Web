@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // isso e um comentario de uma linha
+        var nome = "marcelo soares";
+        var idade = 40;
+        var endereco = "Cachoerinha/RS";
+
+       // alert("Meu nome é " + nome);
+       // alert("minha idade é: " + idade);
+       // alert("Meu endereço é: "+ endereco);
+
+        // declaracao funcao.
+        function somar(valorA,valorB){
+            var resultado = parseInt(valorA) + parseInt(valorB);            
+            return resultado;
+        }
+        var v1 = prompt("Digite o valor 1");
+        var v2 = prompt("Digite o valor 2");
+        var resultado = somar(v1,v2);
+        alert("resultado da soma: " +  resultado);
+        
+        console.info("eu executei minha soma com sucesso.");
+
+        document.write("Este texto foi feito em JS</br>");
+        document.write("<h2>Aula de PW</h2></br>");
+        document.write("<a href='http://www.uol.com.br'>UOL</a></br>");
+
+        var index=0;
+        for(index=0; index <=10; index++ ){
+            if(index % 2 ==0){
+                document.write("este numero é par "  + index + "</br>");
+            }else{
+                document.write("este numero é impar "  + index + "</br>");
+            }
+        }
+
+        var totalLinhas = prompt("digite total de linhas da tabela");
+        var linha = 0;
+        document.write("<table border='1'>");
+        for(linha =0; linha < parseInt(totalLinhas); linha++){            
+            if(linha % 2 ==0){
+                document.write("<tr bgcolor='red'>");
+            }else{
+                document.write("<tr bgcolor='blue'>");
+            }
+            document.write("<td>");
+            document.write(linha);
+            document.write("</td>");
+            document.write("</tr>");        
+        }
+        document.write("</table>");
+
+    </script>
+
+    Este texto foi feito em HTML
+
+    <script type="text/javascript">
+    //    alert("Meu endereço é: "+ endereco);    
+    </script>
+    
+    
+
+</body>
+</html>

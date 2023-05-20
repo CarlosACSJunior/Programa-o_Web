@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <script type="text/javascript">
+        function eventoBotao(){
+            //alert("Ola mundo !!");
+            var nome = f.nome.value;
+            alert("eu digitei " + nome);
+
+            var nome2 = document.getElementById("nome");
+            alert("2: eu digitei  " + nome2.value);
+        }
+    </script>
+
+    <p>Clique no botao abaixo</br></p>
+    <form name="f">
+        Nome: <input type="text" name="nome" id="nome"/>
+        </br>
+        <input type="button" onclick="eventoBotao()" 
+                value="clique"/>
+    </form> -->
+
+    <script type="text/javascript">
+        function calcular(){
+            var v1 = document.getElementById("v1").value;
+            var v2 = document.getElementById("v2").value;
+            var op = document.getElementById("op").value;
+            if(op=="somar"){
+                var somar = parseInt(v1) + parseInt(v2);
+                document.getElementById("resultado").innerHTML =
+                                     "Resultado da soma " + somar;
+            }
+            if(op=="subtracao"){
+                var subtracao = parseInt(v1) - parseInt(v2);
+                document.getElementById("resultado")
+                    .innerHTML = "Resultado da subtracao " + subtracao;
+            }
+            
+        }
+
+
+    </script>
+
+    <form >
+        Valor 1 <input type="number" id="v1" name="v1"/>
+        </br>
+        Valor 2 <input type="number" id="v2" name="v2"/>
+        </br>
+        <select name="op" id="op">
+            <option value="somar" >Somar</option>
+            <option value="subtracao">Sutração</option>
+        </select>
+        </br>
+        <input type="button" onclick="calcular()" value="calcular"/>
+    </form>
+    <div id="resultado"></div>
+
+
+</body>
+</html>

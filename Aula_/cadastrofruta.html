@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="processa_cadastro_fruta.php" method="post">
+        Nome: <input type="text" name="nome_fruta"/>
+        <br>
+        preço: <input type="text" name="preco_fruta" />
+        <br>
+        <input type="submit"/>
+    </form>
+    <a href="processa_pedidos.php?id=1&nome=teunome">
+        link
+    </a>
+    <script>
+        document.write("<table border='1'");
+        document.write("<tr><td>Nome</td><td>Ação</td></tr>");
+
+
+        for(var i=1; i<5; i++){
+            document.write("<tr><td>");
+            document.write("Fulano de tal " + i);
+            document.write("</td><td>");
+            document.write("<a href='processar.php?id=" + i + "'>Editar</a>");
+            document.write("</td></tr>");    
+            }
+            document.write("</table>");    
+
+    </script>
+
+
+
+</body>
+</html>

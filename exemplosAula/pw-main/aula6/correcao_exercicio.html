@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        // for(;;){ // laco infinito
+        //     var v1 = prompt("digite o valor 1");
+        //     var v2 = prompt("digite o valor 2");
+        //     var op = prompt("digite a operacao [+-*/] ou sair");
+
+        //     if(op == "+"){
+        //         var soma = parseFloat(v1) + parseFloat(v2);
+        //         alert("A soma foi: " + soma);
+        //     }else if(op == "-"){
+        //         var subtracao = parseFloat(v1) - parseFloat(v2);
+        //         alert("A subtracao foi: " + subtracao);
+        //     }
+        //     else if(op == "*"){
+        //         var mul = parseFloat(v1) * parseFloat(v2);
+        //         alert("A mul foi: " + mul);
+        //     }
+        //     else if(op == "/"){
+        //         var div = parseFloat(v1) / parseFloat(v2);
+        //         alert("A div foi: " + div);
+        //     }else if(op == "sair"){
+        //         break; // cair fora do laco
+        //     }else{
+        //         alert("opcao invalida");
+        //     }
+        // }
+
+        var nome = prompt("digite seu nome");
+        var idade = prompt("digite sua idade");
+        validaDados(nome,idade);
+
+
+        function validaDados(nome,idade){
+            var error = "";
+            if(nome == "" ){
+                error = "Digite seu nome\n";
+            }
+            if(parseInt(idade) < 0 || parseInt(idade) > 120){
+                error = error + "Idade invalida [0-120]\n";
+            }
+
+            if(error != ""){
+                alert(error);
+            }else{
+                alert("Dados cadastrados com sucesso");
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

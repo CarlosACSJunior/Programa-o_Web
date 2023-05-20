@@ -1,0 +1,44 @@
+<html>
+    <meta charset="UTF-8"/>
+    <!--metadados para renderizar para região do Brasil-->
+    <title>testes da Aula 3</title>
+
+    <body bgcolor="#1DE7E2">
+        <div align="left">
+
+        <p> teste</p>
+        <p align="left">Texto alinhado à esquerda</p>
+        <p align="center">Texto alinhado ao centro</p>
+        <p align="right">Texto alinhado à direita</p>
+        </div>
+
+        <!--"br" nova linha-->
+        Carlos Aberto </br>Gravataí</br>Grêmio
+        <!--"div" empacota um conjunto de tags para dividir a pagina
+        "este é o nome e pode ser mudado" e pode modificar somente alguns elementos-->
+        <!--h1 até H6 h6 texto pequeno-->
+        <h1>texto</h1>
+        <h2>texto</h2>
+        <h3>texto</h3>
+        <h4>texto</h4>
+        <h5>texto</h5>
+        <h6>texto</h6>
+    </br></br></br></br></br></br></br>
+        <a href="http://www.terra.com.br">conteúdo</a>
+        <a href="arquivo2.html">pagina 2</a>
+        <br>
+        <table border="1">
+            <tr><td> nome </td><td>idade</td></tr>
+            <tr><td> pedro</td><td>35</td></tr>
+        </table>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

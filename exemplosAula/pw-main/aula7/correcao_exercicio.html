@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function mostraNOmeEndereco(){
+            alert("nome marcelo\nendereço: cachoeirinha");
+        }
+
+        function validaTextoQualquer(){
+            var texto_qualquer= document.getElementById("texto_qualquer").value;
+            if(texto_qualquer == ""){
+                alert("digite algo na caixa");
+            }else{
+                alert("sucesso");
+            }
+        }
+
+        function validar(){
+            //nome (50), idade, rg e endereço (60)
+            var nome = document.getElementById("nome").value;
+            if(nome == ""){
+                alert("Digite o campo nome");
+                document.getElementById("nome").focus();
+                return;
+            }
+            if(nome.length > 50){
+                alert("O campo nome deve ter no máximo 50 caracter");
+                document.getElementById("nome").focus();
+                return;
+            }
+            var idade = document.getElementById("idade").value;
+            if(isNaN(idade)){
+                alert("O campo numnero tem que ter somente numeros");
+                document.getElementById("idade").focus();
+                return;
+            }
+
+            var rg = document.getElementById("rg").value;
+            if(rg == ""){
+                alert("O campo rg tem que ser preenchido");
+                document.getElementById("rg").focus();
+                return;
+            }
+            if(rg.length >= 10){
+                alert("O campo rg tem que ter no maximo 10 digitos");
+                document.getElementById("rg").focus();
+                return;
+            }
+            if(isNaN(rg)){
+                alert("O campo RG tem que ter somente numeros");
+                document.getElementById("rg").focus();
+                return;
+            }
+            var endereco = document.getElementById("endereco").value;
+            if(endereco == "" ){
+                alert("O campo endereco tem que ser digitado");
+                document.getElementById("endereco").focus();
+                return;
+            }
+            if(endereco.lenght > 60){
+                alert("O campo endereco maximo 60 caractereres");
+                document.getElementById("endereco").focus();
+                return;
+            }
+
+            alert("sucesso no cadastro");
+
+        }
+
+    </script>
+
+
+<input type="button" value="aperte" 
+    onclick="mostraNOmeEndereco()" />
+</br>
+
+Digite algo <input type="text" id="texto_qualquer"/>
+<input type="button" value="aperte" 
+    onclick="validaTextoQualquer()" />
+</br>
+</br>
+</br>
+
+
+Nome: <input type="text" id="nome"/></br>
+Idade: <select id="idade">            
+            <script>   
+                for(var i=0; i <= 150;i++){
+                    document.write("<option>");
+                    document.write(i);
+                    document.write("</option>");
+                }                
+            </script> 
+       </select>
+    </br>
+RG: <input type="text" id="rg"/></br>
+Endereço: <input type="text" id="endereco"/></br>
+<input type="button" value="validar dados" 
+    onclick="validar()" />
+
+
+</body>
+</html>

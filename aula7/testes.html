@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script type="text/javascript">
+        function eventoBotao() {
+            //alert("Olá Mundo")
+            var nome = f.nome.value;
+            alert("eu digitei " + nome);
+
+            var nome2 = document.getElementById("nome");
+            alert("2: eu digitei " + nome2.value);
+        }
+
+    </script>
+
+    <p>clique no botão a segir e veja o resultado</p>
+    <form name="f">
+        Nome:<input type="text" name="nome" id="nome"/>
+        <br>
+        <input type="button" onclick="eventoBotao()" value="clique" />
+    </form> -->
+    <script type="text/javascript">
+        function calcular(){
+            var v1 = document.getElementById("v1").value;
+            var v2 = document.getElementById("v2").value;
+            var v1 = document.getElementById("op").value;
+            if(op == "somar"){
+                var somar = parseInt(v1) + parseInt(v2);
+                document.getElementById("resultado").innerHTML = "resultado da soma"
+            }
+            if(op == "subtracao"){
+                var subtracao = parseInt(v1) - parseInt(v2);
+                document.getElementById("resultado").innerHTML = "resultado da subtração"
+            }
+        }
+    </script>
+    <form >
+        valor 1 <input type="number" id="v1" name="v1"/>
+        <br>
+        valor 2 <input type="number" id="v2" name="v2"/>
+        <br>
+        <select name="op" id="op">
+            <option value="somar" >somar</option>
+            <option value="subtracao">subtração</option>
+        </select>
+        </br>
+        <input type="button" onclick="calcular()" value="calcular"/>
+    </form>
+    <div id="resultado"></div>
+</body>
+</html>
