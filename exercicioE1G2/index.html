@@ -7,48 +7,51 @@
     <title>Document</title>
 </head>
 <body>
-    <script type="text/javascript">
-       function valida(){
-             var nome = document.getElementById("nome").value;
-             var snome = document.getElementById("sobrenome").value;
-             var email = document.getElementById("email").value;
-             var sexo = document.getElementsByName("sexo").value;
-            if (nome == ""){
-                alert("Todos os campos devem ser preenchidos");
-            document.getElementById("nome").focus();
-            return;
-            }
-            if (snome == ""){
-                alert("Todos os campos devem ser preenchidos");
-            document.getElementById("sobrenome").focus();
-            return;
-            }
-            if (email == ""){
-                alert("Todos os campos devem ser preenchidos");
-            document.getElementById("email").focus();
-            return;
-            }
-            if (sexo == ""){
-                alert("Todos os campos devem ser preenchidos");
-            document.getElementById("sexo").focus();
-            return;
-            }
-        }
-     </script>
+    
     <form action="processa.php" method="post">
         Primeiro nome: <input type="text" name="nome" id="nome"><br>
         Ultimo nome: <input type="text" name="sobrenome" id="sobrenome"><br>
         Email: <input type="text" name="email" id="email"><br>
 
-        <input type="radio" name="sexo" value="1" >Masculino
+        <input type="radio" name="sexo" value="Masculino" >Masculino
         <br>
-        <input type="radio" name="sexo" value="2" >Feminino
+        <input type="radio" name="sexo" value="Feminino" >Feminino
         <br>
         <input type="submit" name="enviar" onclick="return valida()">
         <input type="reset" >
        
     </form> 
-    
+    <script type="text/javascript">
+        function valida(){
+              var nome = document.getElementById("nome").value;
+              var snome = document.getElementById("sobrenome").value;
+              var email = document.getElementById("email").value;
+              var sexo = document.getElementsByName("sexo").value;
+             if (nome == ""){
+                 alert("Todos os campos devem ser preenchidos");
+                document.getElementById("nome").focus();
+                 return false;
+                 }
+             if (snome == ""){
+                 alert("Todos os campos devem ser preenchidos");
+                document.getElementById("sobrenome").focus();
+                return false;
+                }
+             if (email == ""){
+                 alert("Todos os campos devem ser preenchidos");
+                document.getElementById("email").focus();
+                return false;
+                 }
+             if (sexo == ""){
+                 alert("Todos os campos devem ser preenchidos");
+                document.getElementById("sexo").focus();
+                return false;
+                }
+              else{
+                return true;
+              }  
+             }
+      </script>
     
 </body>
 </html>

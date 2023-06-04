@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de animais</title>
+</head>
+<body>
+    <form action="animais.php" method="post">
+        <h2>Qual animal deseja pesquisar</h2><br>
+        <input type="text" name="animal" id="animal">
+        <input type="submit" name="enviar" onclick="return verificar()">
+    </form>
+    <script>
+        function verificar(){
+            var bicho = document.getElementById("animal").value;
+            if(bicho == ""){
+                alert("preencha o campo");
+                return false;    
+            }else{
+                return true;
+            }
+        }
+    </script>
+    
+</body>
+</html>

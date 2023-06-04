@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="lista.php" method="post">
+        <h2>adicine o seu item de compra</h2><br>
+        <input type="text" name="item" id="item">
+        <input type="submit" name="enviar" onclick="return verificar()"><br>
+    </form>
+    <form action="listaproduto.php" method="post">
+      listar<input type="submit" name="Listar">
+    </form>
+    <script>
+        function verificar(){
+            var Item = document.getElementById("item").value;
+            if(Item == ""){
+                alert("preencha o campo");
+                return false;    
+            }else{
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
