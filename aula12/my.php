@@ -30,7 +30,7 @@
     mostraNome($nome);
     
     function mostraNome($nome){
-        echo"<br>".mostraNome($nome)
+        echo"<br>".mostraNome($nome);
         }
     ?>
 </body>
