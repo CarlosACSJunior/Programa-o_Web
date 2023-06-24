@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nesta página você cadastra seu filme Preferido</h1> 
+    <form action="cadastro_Filme.php" method="post">
+    Nome do filme: <input type="text" name="nome"/><br>
+    Nome do Diretor: <input type="text" name="diretor"/><br>
+    Nome do ator Principal: <input type="text" name="atorprincipal"/><br>
+    Ano de lançamento: <input type="text" name="anodelancamento"/><br>
+    <input type = "submit" value="Cadastrar" onclick="return tudook()"/>
+    </form>
+    <script type="text/javascript">
+        function tudook(){
+              var Nome = document.getgetElementsByName("nome").value;
+              var Diretor = document.getElementsByName("diretor").value;
+              var Atorprincipal = document.getElementsByName("atorprincipal").value;
+              var Anodelancamento = document.getElementsByName("anodelancamento").value;
+             if (Nome == ""){
+                 alert("Todos os campos devem ser preenchidos");
+                document.getElementById("nome").focus();
+                 return false;
+                 }
+             if (Diretor == ""){
+                 alert("Todos os campos devem ser preenchidos");
+                document.getElementById("diretor").focus();
+                return false;
+                }
+             if (Atorprincipal == ""){
+                 alert("Todos os campos devem ser preenchidos");
+                document.getElementById("atorprincipal").focus();
+                return false;
+                 }
+             if (Anodelancamento == ""){
+                 alert("Todos os campos devem ser preenchidos");
+                document.getElementById("anodelancamento").focus();
+                return false;
+                }
+              else{
+                return true;
+              }  
+             }
+      </script>
+
+    
+</body>
+</html>

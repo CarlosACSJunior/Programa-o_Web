@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.php" >
-    <title>Document</title>
+    <title>Lista de filmes</title>
 </head>
 <body>
     <h1>Filmes já cadastrados</h1>
@@ -19,20 +19,21 @@
                 or die ();
                 
     echo "<table border='1'>";         
-    echo "<tr><td>ID</td><td>Nome</td><td>Diretor</td><td>ator Principal</td><td>Ano de lançamento</td><td>Ação</td></tr>";
+    echo "<tr> <td>ID</td><td>Nome</td><td>Diretor</td><td>Ator Principal</td><td>Ator Coadjuvante</td><td>Ano de lançamento</td><td>Opções</td></tr>";
     while($linha = mysqli_fetch_array($query)){
         echo "<tr>";
         echo "<td>" . $linha["id"] . "</td>" ;
         echo "<td>" . $linha["nome"] . "</td>" ;
         echo "<td>" . $linha["diretor"] . "</td>" ;
         echo "<td>" . $linha["atorprincipal"] . "</td>" ;
+        echo "<td>" . $linha["atorcoadijuvante"] . "</td>" ;
         echo "<td>" . $linha["anodelancamento"] . "</td>" ;
         echo "<td>
                 <a href='deleta_Filme.php?id=".$linha["id"]."'> 
-                    <img width=15 height=15 src='delete.png'/>
+                    <img width=48 height=48 src='delete.png'/>
                 </a>
                 <a href='index.php?id=".$linha["id"]."'> 
-                    <img width=15 height=15 src='update.png'/>
+                    <img width=48 height=48 src='update.png'/>
                 </a>
             </td>";
         echo "</tr>";
@@ -44,5 +45,6 @@
     ?>
 
 <a href="index.php">cadastro de filmes</a>
+icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 </body>
 </html>
